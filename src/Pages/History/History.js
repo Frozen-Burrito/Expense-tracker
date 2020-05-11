@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { GlobalContext } from '../../context/GlobalState';
+
+import TransactionCard from '../../Components/TransactionCard';
 
 const HistoryPage = () => {
+
+    const { transactions } = useContext(GlobalContext)
+
     return (
-        <div className="center">
-            <h2>Activity</h2>
+        <div className="center w-90 scrollable">
+
+            <div className="transaction-list">
+                {transactions.map(transaction => (
+                    <TransactionCard key={transaction.id} transaction={transaction} />
+                ))}
+            </div>
+
+            
         </div>
     )
 }
