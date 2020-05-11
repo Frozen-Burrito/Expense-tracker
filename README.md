@@ -1,10 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Expense Tracker
 
-## Available Scripts
+A compact web app that keeps track of income, expenses, transaction history and financial statistics
 
-In the project directory, you can run:
+> In development
 
-### `npm start`
+## Getting Started
+
+Download the project. In the root directory, you can run:
+
+#### `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -37,32 +41,16 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## What I've Learned
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I followed a tutorial for the base functionality, and added other features by myself. 
 
-### Code Splitting
+I've learned: 
+* Web design using Figma
+* React global state
+* React hooks
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## React Documentation
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+For more details about the project, you can check the [React documentation](https://reactjs.org/) and the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
