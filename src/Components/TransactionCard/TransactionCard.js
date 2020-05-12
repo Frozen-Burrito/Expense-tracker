@@ -1,22 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 
+import { GlobalContext } from '../../context/GlobalState';
+
 const TransactionCard = ({ transaction }) => {
+
+    const { deleteTransaction } = useContext(GlobalContext);
 
     const sign = transaction.amount < 0 ? '-' : '+';
 
     return (
-        <Link to={`/transaction/${transaction.id}`}>
-            <div className="card column left">
-                <h4>{transaction.name}</h4>
+        
+        <div className="card column left">
+            <div>
+                <Link to={`/transaction/${transaction.id}`}><h4>{transaction.name}</h4></Link>
                 <p className="category orange">{transaction.category}</p>
-
-                <div className="card-info">
-                    <h3>{sign}${Math.abs(transaction.amount)}</h3>
-                    <h3>03/10/2020</h3>
-                </div>
+                <button className="btn-delete" onClick={() => deleteTransaction(transaction.id)}>Delete</button>
             </div>
-        </Link>
+
+            <div className="card-info">
+                <h3>{sign}${Math.abs(transaction.amount)}</h3>
+                <h3>03/10/2020</h3>
+            </div>
+        </div>
+    
     )
 }
 

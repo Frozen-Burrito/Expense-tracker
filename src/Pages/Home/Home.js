@@ -7,7 +7,7 @@ import Totals from '../../Components/Totals';
 const Home = () => {
     return (
         <div className="center w-90 full-page">
-            <p>Welcome back <span>SendNoobs</span></p>
+            <p>Welcome back <span>Frozen Burrito</span></p>
 
             <Balance />
             <Totals />

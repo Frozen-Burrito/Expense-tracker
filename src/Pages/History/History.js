@@ -12,9 +12,14 @@ const HistoryPage = () => {
         <div className="center w-90 scrollable">
 
             <div className="transaction-list">
-                {transactions.map(transaction => (
-                    <TransactionCard key={transaction.id} transaction={transaction} />
-                ))}
+                { transactions.length ? transactions.map(transaction => (
+                        <TransactionCard key={transaction.id} transaction={transaction} />
+                    )) : (
+                        <div className="center">
+                            <h3>You have no transactions</h3>
+                        </div>
+                    )
+                }
             </div>
 
             
