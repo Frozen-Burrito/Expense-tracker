@@ -8,10 +8,10 @@ const AddBtn = () => {
     const { setActivePage, activePage } = useContext(GlobalContext);
 
     const handleClick = () => {
-        if (activePage === 'Add Transaction') {
+        if (activePage === 'Add') {
             setActivePage('Dashboard');
         } else {
-            setActivePage('Add Transaction')
+            setActivePage('Add')
         }
     }
 
@@ -24,7 +24,7 @@ const AddBtn = () => {
     }
 
     return (
-        <NavLink to={activePage === 'Add Transaction' ? "/" : "/add-transaction"}>
+        <NavLink to={activePage === 'Add' ? "/" : "/add-transaction"}>
             <button className="floatingActionBtn" onClick={handleClick}>
                 <i className="fas fa-plus" style={activePage === 'Add Transaction' ? FABtnActiveStyle : FABtnStyle}></i>
             </button>

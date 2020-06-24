@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import { GlobalContext } from '../../context/GlobalState';
 
@@ -6,7 +6,11 @@ import TransactionCard from '../../Components/TransactionCard';
 
 const HistoryPage = () => {
 
-    const { transactions } = useContext(GlobalContext)
+    const { transactions, getTransactions } = useContext(GlobalContext);
+
+    useEffect(() => {
+        getTransactions();
+    }, []);
 
     return (
         <div className="center w-90 scrollable">

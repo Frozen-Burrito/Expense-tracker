@@ -15,7 +15,7 @@ const TransactionCard = ({ transaction }) => {
             <div>
                 <Link to={`/transaction/${transaction.id}`}><h4>{transaction.name}</h4></Link>
                 <p className="category orange">{transaction.category}</p>
-                <button className="btn-delete" onClick={() => deleteTransaction(transaction.id)}>Delete</button>
+                <button className="btn-delete" onClick={() => deleteTransaction(transaction._id)}>Delete</button>
             </div>
 
             <div className="card-info">

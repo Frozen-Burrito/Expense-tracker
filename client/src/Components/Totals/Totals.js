@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 
 import { GlobalContext } from '../../context/GlobalState';
 
+import { formatAmount } from '../../utils/formatAmount';
+
 const Totals = () => {
 
     const { transactions } = useContext(GlobalContext);
@@ -15,12 +17,12 @@ const Totals = () => {
     return (
         <div className="card split">
             <div className="card-half">
-                <h3>${ income }</h3>
+                <h3>${ formatAmount(income) }</h3>
                 <p>Income</p>
             </div>
 
             <div className="card-half">
-                <h3>${ expenses }</h3>
+                <h3>${ formatAmount(expenses) }</h3>
                 <p>Expenses</p>
             </div>
         </div>
